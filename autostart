@@ -1,0 +1,16 @@
+#! /bin/bash
+
+#АВТОСТАРТ
+sxhkd &
+numlockx &
+xsetroot -cursor_name left_ptr &
+~/virtualmonitor  &
+compton -f --vsync opengl-oml &
+
+sleep 2 && setxkbmap -option 'ctrl:nocaps' ; setxkbmap 'us,ru' ',winkeys' 'grp:alt_shift_toggle' &
+while [[ 1 == 1 ]]; do sleep 1 && x0vncserver -localhost no -passwordfile ~/.vnc/passwd -display :0 -geometry 1920x1080+1920+0; done &
+#feh --bg-scale $1 $1 &
+#php -S 192.168.43.234:3000 ~/screencast.php &
+
+
+#ВОРКСПЕЙСЫ
